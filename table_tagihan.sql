@@ -1,0 +1,8 @@
+CREATE TABLE `tagihan` (
+  `ID_TAGIHAN` int(11) NOT NULL,
+  `HARGA` int(11) NOT NULL,
+  `STATS` int(11) NOT NULL,
+  `TGL_BAYAR` datetime DEFAULT NULL,
+  `NCLI` varchar(32) NOT NULL,
+  `ID_LAYANAN` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
