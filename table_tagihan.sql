@@ -9,3 +9,7 @@ CREATE TABLE `tagihan` (
 
 ALTER TABLE `tagihan`
   ADD PRIMARY KEY (`ID_TAGIHAN`),
+  ADD KEY `layanan_tagihan_fk` (`ID_LAYANAN`),
+  ADD KEY `pelanggan_tagihan_fk` (`NCLI`),
+  ADD CONSTRAINT `layanan_tagihan_fk` FOREIGN KEY (`ID_LAYANAN`) REFERENCES `layanan` (`ID_LAYANAN`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `pelanggan_tagihan_fk` FOREIGN KEY (`NCLI`) REFERENCES `pelanggan` (`NCLI`) ON DELETE NO ACTION ON UPDATE NO ACTION;
