@@ -1,0 +1,7 @@
+CREATE TABLE `layanan` (
+  `ID_LAYANAN` int(11) NOT NULL,
+  `NAMA` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `layanan`
+  ADD PRIMARY KEY (`ID_LAYANAN`);

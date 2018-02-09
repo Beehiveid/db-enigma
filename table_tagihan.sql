@@ -1,0 +1,15 @@
+CREATE TABLE `tagihan` (
+  `ID_TAGIHAN` int(11) NOT NULL,
+  `HARGA` int(11) NOT NULL,
+  `STATS` int(11) NOT NULL,
+  `TGL_BAYAR` datetime DEFAULT NULL,
+  `NCLI` varchar(32) NOT NULL,
+  `ID_LAYANAN` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `tagihan`
+  ADD PRIMARY KEY (`ID_TAGIHAN`),
+  ADD KEY `layanan_tagihan_fk` (`ID_LAYANAN`),
+  ADD KEY `pelanggan_tagihan_fk` (`NCLI`),
+  ADD CONSTRAINT `layanan_tagihan_fk` FOREIGN KEY (`ID_LAYANAN`) REFERENCES `layanan` (`ID_LAYANAN`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `pelanggan_tagihan_fk` FOREIGN KEY (`NCLI`) REFERENCES `pelanggan` (`NCLI`) ON DELETE NO ACTION ON UPDATE NO ACTION;
