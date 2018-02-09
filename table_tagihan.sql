@@ -6,3 +6,6 @@ CREATE TABLE `tagihan` (
   `NCLI` varchar(32) NOT NULL,
   `ID_LAYANAN` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `tagihan`
+  ADD PRIMARY KEY (`ID_TAGIHAN`),
