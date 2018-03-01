@@ -33,3 +33,7 @@ INSERT INTO `tagihan` (`ID_TAGIHAN`, `HARGA`, `STATS`, `TGL_BAYAR`, `NCLI`, `ID_
 (100002, 200000, 0, NULL, '9995658457', 0),
 (100003, 250000, 0, NULL, '9995658458', 0),
 (100005, 200000, 0, NULL, '9995658458', 0);
+
+INSERT INTO `users` (`id`, `username`, `password`, `fullname`, `department`, `status`) VALUES 
+('manualinput001', 'nanda', '123456', 'Febrinanda Endriz Pratama', 'IT', '7'),
+('manualinput002', 'cassie', '123456', 'Cassie Nourmi', 'Sales', '1');
