@@ -1,11 +1,13 @@
 CREATE TABLE `users` (
 	`id` VARCHAR(50) NOT NULL,
-	`username` VARCHAR(50) NULL,
-	`password` VARCHAR(50) NULL,
-	`fullname` VARCHAR(50) NULL,
-	`department` VARCHAR(50) NULL,
-	`status` TINYINT NULL,
+	`username` VARCHAR(50) NULL DEFAULT NULL,
+	`password` VARCHAR(50) NULL DEFAULT NULL,
+	`fullname` VARCHAR(50) NULL DEFAULT NULL,
+	`department` VARCHAR(50) NULL DEFAULT NULL,
+	`status` TINYINT(4) NULL DEFAULT NULL,
+	`avatar` VARCHAR(50) NULL DEFAULT NULL,
 	PRIMARY KEY (`id`)
 )
 COLLATE='latin1_swedish_ci'
 ENGINE=MyISAM
+;
